@@ -1,4 +1,4 @@
-# aulas
+# vue_cli
 
 ## Project setup
 ```
