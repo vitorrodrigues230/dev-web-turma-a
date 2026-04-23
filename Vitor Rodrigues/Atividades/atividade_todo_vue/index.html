@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tarefas - Vue 3</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="script.js" defer></script>
+    <style>
+      body {
+        font-family: "Gill Sans";
+        background: #cdcdcd;
+        padding: 16px;
+      }
+      h1 {
+        color: rgb(2, 93, 96);
+        text-align: center;
+      }
+      .input-area {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+      #tarefaInput {
+        padding: 8px;
+        width: 160px;
+        border-radius: 8px;
+        border: 1px solid #ccc;
+      }
+      #btnAdicionar {
+        padding: 8px 12px;
+        margin-left: 5px;
+        color: white;
+        background-color: brown;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+      }
+      #btnAdicionar:hover {
+        color: rgb(184, 183, 183);
+        background-color: rgb(99, 21, 21);
+        transition: 0.5s;
+      }
+      ul {
+        padding: 0px;
+      }
+      li {
+        background: #fff;
+        margin: 16px 16px;
+        padding: 10px;
+        border-radius: 6px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
+      }
+      .fechar {
+        background-color: darkred;
+        color: white;
+        border: none;
+        border-radius: 100px;
+        width: 25px;
+        height: 25px;
+        cursor: pointer;
+      }
+      li.concluida {
+        text-decoration: line-through;
+        color: gray;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app">
+      <h1>Tarefas</h1>
+      <div class="input-area">
+        <input 
+          type="text" 
+          id="tarefaInput" 
+          placeholder="Digite sua Tarefa!" 
+          v-model="novaTarefa"
+          @keyup.enter="adicionarTarefa"
+        />
+        <button id="btnAdicionar" @click="adicionarTarefa">+</button>
+      </div>
+
+      <ul id="listaTarefas">
+        <li 
+          v-for="(tarefa, index) in tarefas" 
+          :key="index"
+          :class="{ concluida: tarefa.concluida }"
+          @click="alternarTarefa(index)"
+        >
+          {{ tarefa.texto }}
+          <button class="fechar" @click.stop="removerTarefa(index)">x</button>
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>
