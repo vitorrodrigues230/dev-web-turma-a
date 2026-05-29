@@ -33,7 +33,7 @@
             <option
               v-for="pontoCarne in listaPontoCarne"
               :key="pontoCarne.id"
-              value="pontoCarne"
+              :value="pontoCarne"
             >
               {{ pontoCarne.descricao }}
             </option>
@@ -116,7 +116,7 @@ export default {
         bebidas: Array.from(this.listaBebidasSelecionadas),
         complemento: Array.from(this.listaComplementosSelecionados),
         // [] pq é uma lista e o usuário pode pedir mais de um
-        burguer: this.burguer,
+        hamburguer: this.burguer,
         statusId: 5,
       };
 
