@@ -45,7 +45,7 @@
   ],
   "pedidos": [
     {
-      "nome": "Fernando",
+      "nome": "fdsfsdfsdf",
       "ponto": {
         "id": 1,
         "descricao": "Ao ponto"
@@ -60,7 +60,7 @@
           "eh_novidade": false
         }
       ],
-      "complementos": [
+      "complemento": [
         {
           "id": 1,
           "nome": "Combo Bebida + Batata",
@@ -68,10 +68,17 @@
           "foto": "https://instadelivery-public.nyc3.cdn.digitaloceanspaces.com/itens/1696431534651d7daeba24e_75_75.jpeg",
           "valor": 11,
           "eh_novidade": true
+        },
+        {
+          "id": 2,
+          "nome": "Batata ondulada sequinha e crocante temperada com lemon pepper",
+          "descricao": "",
+          "foto": "https://instadelivery-public.nyc3.cdn.digitaloceanspaces.com/itens/1696431513651d7d99094b6_75_75.jpeg",
+          "valor": 7,
+          "eh_novidade": false
         }
       ],
-      "statusId": 6,
-      "hamburguer": {
+      "burguer": {
         "id": 1,
         "nome": "Diretoria Alterado",
         "foto": "https://instadelivery-public.nyc3.cdn.digitaloceanspaces.com/itens/1696429768651d76c8124dc_75_75.jpeg",
@@ -79,7 +86,8 @@
         "valor": 35,
         "eh_novidade": true
       },
-      "id": 2
+      "statusId": "2",
+      "id": 20
     }
   ],
   "opcionais": {
