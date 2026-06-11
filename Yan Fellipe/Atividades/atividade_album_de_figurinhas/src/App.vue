@@ -7,7 +7,7 @@
       </div>
       <div class="navbar-links">
         <router-link to="/">🏠 Início</router-link>
-        <router-link to="/album">🎴 Meu Álbum</router-link>
+        <router-link to="/album">🎴 Álbum Oficial</router-link>
       </div>
     </nav>
 
@@ -23,7 +23,7 @@ export default {
 </script>
 
 <style>
-/* Reset básico */
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -32,23 +32,23 @@ export default {
 
 body {
   font-family: 'Segoe UI', Arial, sans-serif;
-  background-color: #f1f5f9; 
+  background-color: #f3f0f7;
 }
 
-/* ===== NAVBAR ===== */
+
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #0f172a; 
+  background-color: #1e0a2e;
   padding: 15px 30px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 6px rgba(59, 7, 100, 0.3);
 }
 
 .navbar-logo {
   font-size: 22px;
   font-weight: bold;
-  color: white;
+  color: #c0c0c0;
 }
 
 .navbar-links {
@@ -57,7 +57,7 @@ body {
 }
 
 .navbar-links a {
-  color: white;
+  color: #c0c0c0;
   text-decoration: none;
   font-size: 16px;
   font-weight: bold;
@@ -67,12 +67,11 @@ body {
 }
 
 .navbar-links a:hover {
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: rgba(192, 192, 192, 0.15);
 }
 
-
 .navbar-links a.router-link-exact-active {
-  background-color: white;
-  color: #0f172a;
+  background-color: #7c3aed;
+  color: #ffffff;
 }
 </style>
