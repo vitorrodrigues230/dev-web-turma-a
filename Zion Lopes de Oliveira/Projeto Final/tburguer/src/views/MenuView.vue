@@ -1,4 +1,3 @@
-
 <template>
   <div>
     <h1>Menu</h1>
@@ -129,6 +128,3 @@ export default {
   border: solid 1px rgb(53, 108, 121);
 }
 </style>
-
-
-

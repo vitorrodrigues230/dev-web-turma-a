@@ -1,5 +1,3 @@
-
-
 <template>
   <div>
     <h1>Configuração do Pedido</h1>
@@ -29,4 +27,3 @@ export default {
 };
 </script>
 <style scoped></style>
-
