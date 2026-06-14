@@ -5,8 +5,8 @@
         <div id="pedidos-tabela-cabecalho">
           <div id="ordem-id">#ID</div>
           <div>Nome</div>
-          <div>Hamburguer</div>
-          <div>Ponto</div>
+          <div>Item</div>
+          <div>Tamanho</div>
           <div>Opcionais</div>
           <div>Status</div>
           <div id="div-acoes">Ações</div>
@@ -20,18 +20,18 @@
     >
       <div id="ordem-numero">{{ pedido.id }}</div>
       <div>{{ pedido.nome }}</div>
-      <div>{{ pedido.burguer.nome }}</div>
-      <div>{{ pedido.ponto.descricao }}</div>
+      <div>{{ pedido.item && pedido.item.nome ? pedido.item.nome : "-" }}</div>
+      <div>{{ pedido.tamanho && pedido.tamanho.descricao ? pedido.tamanho.descricao : "-" }}</div>
       <div>
-        <ul>
-          <li v-for="(complemento, index) in pedido.complemento" :key="index">
-            {{ complemento.nome }}
+        <ul v-if="pedido.adicionais">
+          <li v-for="(adicional, index) in pedido.adicionais" :key="index">
+            {{ adicional.nome }}
           </li>
         </ul>
         <div class="divider"></div>
-        <ul>
-          <li v-for="(bebida, index) in pedido.bebidas" :key="index">
-            {{ bebida.nome }}
+        <ul v-if="pedido.acompanhamentos">
+          <li v-for="(acompanhamento, index) in pedido.acompanhamentos" :key="index">
+            {{ acompanhamento.nome }}
           </li>
         </ul>
       </div>
@@ -76,7 +76,6 @@ export default {
     async consultarPedidos() {
       const response = await fetch(`${this.$apiUrl}/pedidos`);
       const dados = await response.json();
-      console.log(dados);
       this.listaPedidosRealizados = dados;
     },
     async consultarStatusPedido() {
@@ -84,7 +83,7 @@ export default {
       this.listaStatusPedido = await response.json();
     },
     async deletarPedido(id) {
-      const response = await fetch(`${this.$apiUrl}/pedidos/${id}`, {
+      await fetch(`${this.$apiUrl}/pedidos/${id}`, {
         method: "DELETE",
       });
     },

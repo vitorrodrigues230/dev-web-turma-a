@@ -1,6 +1,6 @@
 <template>
   <div id="main-banner">
-    <h1>Hamburguer de churrasqueiro</h1>
+    <h1>Cafezão Do Bom</h1>
   </div>
 </template>
 <script>
@@ -10,7 +10,7 @@ export default {
 </script>
 <style scoped>
 #main-banner {
-  background-image: url("/public/img/banner.jpeg");
+  background-image: url("~@/assets/banner.jpeg");
   height: 300px;
   background-position: 0;
   background-size: cover;

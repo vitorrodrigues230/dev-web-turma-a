@@ -1,17 +1,32 @@
 import { createRouter, createWebHistory } from "vue-router";
-import MenuView from "@/views/MenuView.vue";
-import ConfiguracaoPedidoView from "@/views/ConfiguracaoPedidoVIew.vue";
+import HomeView from "@/views/HomeView.vue";
+import SobremesasView from "@/views/SobremesasView.vue";
+import BebidasQuentesView from "@/views/BebidasQuentesView.vue";
+import BebidasGeladasView from "@/views/BebidasGeladasView.vue";
 import PedidosView from "@/views/PedidosView.vue";
+import ConfigQuenteView from "@/views/ConfigQuenteView.vue";
+import ConfigSimplesView from "@/views/ConfigSimplesView.vue";
+
 const routes = [
   {
     path: "/",
-    name: "menu",
-    component: MenuView,
+    name: "home",
+    component: HomeView,
   },
   {
-    path: "/menu",
-    name: "menu",
-    component: MenuView,
+    path: "/sobremesas",
+    name: "sobremesas",
+    component: SobremesasView,
+  },
+  {
+    path: "/bebidas-quentes",
+    name: "bebidas-quentes",
+    component: BebidasQuentesView,
+  },
+  {
+    path: "/bebidas-geladas",
+    name: "bebidas-geladas",
+    component: BebidasGeladasView,
   },
   {
     path: "/pedidos",
@@ -19,9 +34,14 @@ const routes = [
     component: PedidosView,
   },
   {
-    path: "/config",
-    name: "config",
-    component: ConfiguracaoPedidoView,
+    path: "/config-quente",
+    name: "config-quente",
+    component: ConfigQuenteView,
+  },
+  {
+    path: "/config-simples",
+    name: "config-simples",
+    component: ConfigSimplesView,
   },
 ];
 

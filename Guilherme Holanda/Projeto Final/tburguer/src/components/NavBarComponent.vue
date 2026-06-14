@@ -1,11 +1,10 @@
 <template>
   <div>
     <nav id="nav">
-      <router-link to="/" id="logo-url">
-        <img src="/img/logo_tburguer.png" id="logo" />
-      </router-link>
       <router-link to="/">Home</router-link> |
-      <router-link to="/menu">Menu</router-link> |
+      <router-link to="/bebidas-quentes">Bebidas Quentes</router-link> |
+      <router-link to="/bebidas-geladas">Bebidas Geladas</router-link> |
+      <router-link to="/sobremesas">Sobremesas</router-link> |
       <router-link to="/pedidos">Pedidos</router-link>
     </nav>
   </div>
@@ -16,26 +15,10 @@ export default {
 };
 </script>
 <style scoped>
-#logo {
-  width: 60px;
-  height: 60px;
-}
-
-#logo:hover {
-  width: 70px;
-  height: 70px;
-  rotate: 360deg;
-  transition: 0.2s;
-}
-
-#nav #logo-url {
-  margin: auto;
-  margin-left: 0;
-}
 
 #nav {
-  background-color: #333;
-  border-bottom: darkgoldenrod 4px solid;
+  background-color: #2b1d12;
+  border-bottom: #ffc107 4px solid;
   padding: 15px 50px;
   display: flex;
   justify-content: flex-end;
@@ -43,7 +26,7 @@ export default {
 }
 
 #nav a {
-  color: darkgoldenrod;
+  color: #ffc107;
   text-decoration: none;
   margin-left: 20px;
   font-size: 18px;
