@@ -1,32 +1,19 @@
-import { createRouter, createWebHistory } from 'vue-router'
-import MenuView from '@/views/MenuView.vue';
-import ConfiguracaoPedidoView from '@/views/ConfiguracaoPedidoView.vue';
-import PedidoView from '@/views/PedidoView.vue';
+import { createRouter, createWebHistory } from "vue-router";
+import HomeView               from "../views/HomeView.vue";
+import MenuView               from "../views/MenuView.vue";
+import ConfiguracaoPedidoView from "../views/ConfiguracaoPedidoView.vue";
+import PedidoView             from "../views/PedidoView.vue";
+
 const routes = [
-  {
-    path: "/",
-    name: "menu",
-    component: MenuView,
-  },
-  {
-    path: "/menu",
-    name: "menu",
-    component: MenuView,
-  },
-{
-    path: "/pedidos",
-    name: "pedidos",
-    component: PedidoView,
-  },
-{
-    path: "/config",
-    name: "config",
-    component: ConfiguracaoPedidoView,
-  },
+  { path: "/",        name: "home",    component: HomeView },
+  { path: "/menu",    name: "menu",    component: MenuView },
+  { path: "/config",  name: "config",  component: ConfiguracaoPedidoView },
+  { path: "/pedidos", name: "pedidos", component: PedidoView },
 ];
+
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
-  routes
-})
+  routes,
+});
 
-export default router
+export default router;

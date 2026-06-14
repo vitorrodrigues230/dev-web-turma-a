@@ -1,208 +1,156 @@
 {
-  "tipos_pontos": [
-    {
-      "id": 1,
-      "descricao": "Ao ponto"
-    },
-    {
-      "id": 2,
-      "descricao": "Bem passada"
-    },
-    {
-      "id": 3,
-      "descricao": "Mal passada"
-    },
-    {
-      "id": 4,
-      "descricao": "Boi morreu a toa!"
-    }
+  "tipos_tamanho": [
+    { "id": 1, "descricao": "Pequeno (200ml)" },
+    { "id": 2, "descricao": "Médio (300ml)" },
+    { "id": 3, "descricao": "Grande (400ml)" },
+    { "id": 4, "descricao": "Família (500ml)" }
   ],
   "status_pedido": [
-    {
-      "id": 1,
-      "descricao": "Pedido em espera"
-    },
-    {
-      "id": 2,
-      "descricao": "Em produção"
-    },
-    {
-      "id": 3,
-      "descricao": "A caminho"
-    },
-    {
-      "id": 4,
-      "descricao": "Entregue"
-    },
-    {
-      "id": 5,
-      "descricao": "Pedido pendente"
-    },
-    {
-      "id": 6,
-      "descricao": "Pedido realizado"
-    }
+    { "id": 1, "descricao": "Pedido em espera" },
+    { "id": 2, "descricao": "Em preparo" },
+    { "id": 3, "descricao": "Pronto para retirada" },
+    { "id": 4, "descricao": "Entregue" },
+    { "id": 5, "descricao": "Pedido pendente" },
+    { "id": 6, "descricao": "Pedido realizado" }
   ],
-  "pedidos": [
-    {
-      "nome": "Arthur",
-      "ponto": {
-        "id": 4,
-        "descricao": "Boi morreu a toa!"
-      },
-      "bebidas": [
-        {
-          "id": 3,
-          "nome": "Coca Cola Zero Lata 310 ml",
-          "descricao": "",
-          "foto": "https://instadelivery-public.nyc3.cdn.digitaloceanspaces.com/itens/1696431455651d7d5fd3661_75_75.jpeg",
-          "valor": 6,
-          "eh_novidade": false
-        }
-      ],
-      "complemento": [
-        {
-          "id": 2,
-          "nome": "Batata ondulada sequinha e crocante temperada com lemon pepper",
-          "descricao": "",
-          "foto": "https://instadelivery-public.nyc3.cdn.digitaloceanspaces.com/itens/1696431513651d7d99094b6_75_75.jpeg",
-          "valor": 7,
-          "eh_novidade": false
-        }
-      ],
-      "burguer": {
-        "id": 3,
-        "nome": "Doritos",
-        "foto": "https://instadelivery-public.nyc3.cdn.digitaloceanspaces.com/itens/1696429871651d772fb9fbe_75_75.jpeg",
-        "descricao": "Delicioso pão de brioche selado na brasa com manteiga de leite, maionese especial, suculento blend de 160 gramas, queijo cheddar derretido na brasa, cream cheese e Doritos.",
-        "valor": 32,
-        "eh_novidade": true
-      },
-      "statusId": 5,
-      "id": 3
-    }
-  ],
+  "pedidos": [],
   "opcionais": {
-    "complemento": [
+    "acompanhamentos": [
       {
         "id": 1,
-        "nome": "Combo Bebida + Batata",
-        "descricao": "Batata ondulada sequinha e crocante temperada com lemon pepper + bebida de sua escolha",
-        "foto": "https://instadelivery-public.nyc3.cdn.digitaloceanspaces.com/itens/1696431534651d7daeba24e_75_75.jpeg",
-        "valor": 11,
+        "nome": "Pão de Queijo (2 unidades)",
+        "descricao": "Pão de queijo mineiro assado na hora, crocante por fora e macio por dentro.",
+        "foto": "https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?w=75&h=75&fit=crop",
+        "valor": 8,
         "eh_novidade": true
       },
       {
         "id": 2,
-        "nome": "Batata ondulada sequinha e crocante temperada com lemon pepper",
-        "descricao": "",
-        "foto": "https://instadelivery-public.nyc3.cdn.digitaloceanspaces.com/itens/1696431513651d7d99094b6_75_75.jpeg",
-        "valor": 7,
+        "nome": "Croissant de Manteiga",
+        "descricao": "Croissant folhado artesanal com manteiga francesa.",
+        "foto": "https://images.unsplash.com/photo-1555507036-ab1f4038808a?w=75&h=75&fit=crop",
+        "valor": 10,
         "eh_novidade": false
+      },
+      {
+        "id": 3,
+        "nome": "Fatia de Bolo do Dia",
+        "descricao": "Pergunte ao atendente o sabor do dia!",
+        "foto": "https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=75&h=75&fit=crop",
+        "valor": 12,
+        "eh_novidade": false
+      },
+      {
+        "id": 4,
+        "nome": "Combo Pão de Queijo + Suco",
+        "descricao": "2 pães de queijo + suco natural de laranja ou maracujá.",
+        "foto": "https://images.unsplash.com/photo-1509358271058-acd22cc93898?w=75&h=75&fit=crop",
+        "valor": 18,
+        "eh_novidade": true
       }
     ],
     "bebidas": [
       {
         "id": 1,
-        "nome": "Coca Cola Lata 310 ml",
-        "descricao": "",
-        "foto": "https://instadelivery-public.nyc3.cdn.digitaloceanspaces.com/itens/1696431408651d7d30645b9_75_75.jpeg",
-        "valor": 6,
+        "nome": "Suco de Laranja Natural",
+        "descricao": "Suco coado na hora, sem adição de açúcar.",
+        "foto": "https://images.unsplash.com/photo-1621506289937-a8e4df240d0b?w=75&h=75&fit=crop",
+        "valor": 10,
         "eh_novidade": false
       },
       {
         "id": 2,
-        "nome": "Shweppes Citrus 310 ml",
+        "nome": "Água com Gás 500ml",
         "descricao": "",
-        "foto": "https://instadelivery-public.nyc3.cdn.digitaloceanspaces.com/itens/16966989566521924cc9418_75_75.jpeg",
+        "foto": "https://images.unsplash.com/photo-1564419320461-6870880221ad?w=75&h=75&fit=crop",
         "valor": 6,
         "eh_novidade": false
       },
       {
         "id": 3,
-        "nome": "Coca Cola Zero Lata 310 ml",
-        "descricao": "",
-        "foto": "https://instadelivery-public.nyc3.cdn.digitaloceanspaces.com/itens/1696431455651d7d5fd3661_75_75.jpeg",
-        "valor": 6,
-        "eh_novidade": false
+        "nome": "Limonada Suíça",
+        "descricao": "Limão, leite condensado e creme de leite batidos na hora.",
+        "foto": "https://images.unsplash.com/photo-1556679343-c7306c1976bc?w=75&h=75&fit=crop",
+        "valor": 14,
+        "eh_novidade": true
       },
       {
         "id": 4,
-        "nome": "Del Valle Uva Lata 290 ml",
-        "descricao": "",
-        "foto": "https://instadelivery-public.nyc3.cdn.digitaloceanspaces.com/itens/1696431434651d7d4a1e285_75_75.jpeg",
-        "valor": 7,
+        "nome": "Chá Gelado Pêssego",
+        "descricao": "Chá de pêssego artesanal servido gelado.",
+        "foto": "https://images.unsplash.com/photo-1499638673689-79a0b5115d87?w=75&h=75&fit=crop",
+        "valor": 10,
         "eh_novidade": false
       }
     ]
   },
   "menu": {
-    "limitado": [
+    "especiais": [
       {
         "id": 1,
-        "nome": "Arretado",
-        "foto": "https://instadelivery-public.nyc3.cdn.digitaloceanspaces.com/itens/1698926982654391866e311_75_75.jpeg",
-        "descricao": "Delicioso pão de brioche selado na brasa com manteiga de leite, maionese especial de alho e ervas, suculento blend de 160 gramas flambado na manteiga de garrafa, coberto de queijo coalho e finalizado com geléia de pimenta Queensberry",
-        "valor": 38,
+        "nome": "Espresso Trufado",
+        "foto": "https://images.unsplash.com/photo-1512568400610-62da28bc8a13?w=75&h=75&fit=crop",
+        "descricao": "Espresso duplo encorpado com calda de trufa negra e espuma de leite integral. Experiência única.",
+        "valor": 22,
         "eh_novidade": true
       }
     ],
-    "burgues": [
+    "cafes": [
       {
         "id": 1,
-        "nome": "Diretoria Alterado",
-        "foto": "https://instadelivery-public.nyc3.cdn.digitaloceanspaces.com/itens/1696429768651d76c8124dc_75_75.jpeg",
-        "descricao": "Delicioso pão de brioche selado na brasa com manteiga de leite, maionese especial de alho e ervas, tomate grelhado e defumado na brasa, suculento blend de 160 gramas, queijo derretido na brasa, molho suave de gorgonzola coberto de crispy de alho poró.",
-        "valor": 35,
-        "eh_novidade": true
+        "nome": "Espresso Clássico",
+        "foto": "https://images.unsplash.com/photo-1596952954288-16862d37405b?w=75&h=75&fit=crop",
+        "descricao": "Grão 100% arábica, torra média, extração precisa. Puro e sem floreios.",
+        "valor": 8,
+        "eh_novidade": false
       },
       {
         "id": 2,
-        "nome": "Veggie",
-        "foto": "https://instadelivery-public.nyc3.cdn.digitaloceanspaces.com/itens/1696429812651d76f4d8671_75_75.jpeg",
-        "descricao": "Delicioso pão de brioche selado na brasa com manteiga de leite, maionese secreta, tomate assado e defumado na lenha frutífera, blend de arroz negro, batata baroa e Shimeji 150 gramas grelhado e regado ao azeite , queijo derretido na brasa e molho secreto de cebola caramelizada, tudo preparado com aquele sabor de churrasco.",
-        "valor": 35,
-        "eh_novidade": true
+        "nome": "Cappuccino Italiano",
+        "foto": "https://images.unsplash.com/photo-1572442388796-11668a67e53d?w=75&h=75&fit=crop",
+        "descricao": "Espresso com leite vaporizado cremoso e espuma densa na proporção clássica italiana.",
+        "valor": 14,
+        "eh_novidade": false
       },
       {
         "id": 3,
-        "nome": "Doritos",
-        "foto": "https://instadelivery-public.nyc3.cdn.digitaloceanspaces.com/itens/1696429871651d772fb9fbe_75_75.jpeg",
-        "descricao": "Delicioso pão de brioche selado na brasa com manteiga de leite, maionese especial, suculento blend de 160 gramas, queijo cheddar derretido na brasa, cream cheese e Doritos.",
-        "valor": 32,
+        "nome": "Latte Caramelo",
+        "foto": "https://images.unsplash.com/photo-1561882468-9110d70d3f49?w=75&h=75&fit=crop",
+        "descricao": "Espresso suave com muito leite vaporizado, calda de caramelo e chantilly.",
+        "valor": 18,
         "eh_novidade": true
       },
       {
         "id": 4,
-        "nome": "Campeiro",
-        "foto": "https://instadelivery-public.nyc3.cdn.digitaloceanspaces.com/itens/1696432070651d7fc6b7c98_75_75.jpeg",
-        "descricao": "Delicioso pão de brioche selado na brasa com manteiga de leite, maionese especial de alho e ervas, alface americana fresca e crocante, tomate grelhado e defumado, suculento hambúrguer de 160 gramas, queijo derretido na brasa.",
-        "valor": 30,
+        "nome": "Cold Brew 24h",
+        "foto": "https://images.unsplash.com/photo-1517701604599-bb29b565090c?w=75&h=75&fit=crop",
+        "descricao": "Café extraído a frio por 24 horas. Sabor suave, encorpado e naturalmente adocicado.",
+        "valor": 16,
         "eh_novidade": true
       },
       {
         "id": 5,
-        "nome": "Braseirão",
-        "foto": "https://instadelivery-public.nyc3.cdn.digitaloceanspaces.com/itens/1701549228656b94ac481d3_75_75.jpeg",
-        "descricao": "Delicioso hambúrguer no pão de brioche selado na brasa, com manteiga de leite, maionese especial com toque de alho e ervas, dois suculentos blend's de 160 gramas e queijo mussarela derretido na brasa.",
-        "valor": 30,
-        "eh_novidade": true
+        "nome": "Café com Leite da Casa",
+        "foto": "https://images.unsplash.com/photo-1497515114629-f71d768fd07c?w=75&h=75&fit=crop",
+        "descricao": "O clássico de sempre. Café coado forte com leite quente na caneca grande.",
+        "valor": 10,
+        "eh_novidade": false
       },
       {
         "id": 6,
-        "nome": "Braseiro",
-        "foto": "https://instadelivery-public.nyc3.cdn.digitaloceanspaces.com/itens/1696432090651d7fda3ebe1_75_75.jpeg",
-        "descricao": "Delicioso hambúrguer no pão de brioche selado na brasa, com manteiga de leite, maionese especial com toque de alho e ervas, suculento blend de 160 gramas, triplo queijo cheddar derretido na brasa.",
-        "valor": 20,
-        "eh_novidade": true
+        "nome": "Mocha",
+        "foto": "https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=75&h=75&fit=crop",
+        "descricao": "Espresso com calda de chocolate belga, leite vaporizado e finalizado com cacau em pó.",
+        "valor": 17,
+        "eh_novidade": false
       },
       {
         "id": 7,
-        "nome": "Churrasqueto",
-        "foto": "https://instadelivery-public.nyc3.cdn.digitaloceanspaces.com/itens/16978359266532eb960c34d_75_75.jpeg",
-        "descricao": "Delicioso hambúrguer no pão de brioche selado na brasa, com manteiga de leite, maionese especial com toque de alho e ervas, suculento blend de 120 gramas, triplo queijo cheddar derretido na brasa.",
-        "valor": 15,
-        "eh_novidade": true
+        "nome": "Macchiato",
+        "foto": "https://images.unsplash.com/photo-1485808191679-5f86510bd9d4?w=75&h=75&fit=crop",
+        "descricao": "Espresso curto 'manchado' com uma colherada de espuma de leite. Intenso e direto.",
+        "valor": 10,
+        "eh_novidade": false
       }
     ]
   }

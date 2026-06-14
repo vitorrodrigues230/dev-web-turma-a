@@ -1,42 +1,38 @@
 <template>
-  <div>
-    <NavBarComponent />
-    <BannerComponent />
-    
-<router-view />
+  <div id="app">
+    <nav-bar-component />
+    <router-view />
   </div>
 </template>
+
 <script>
-import NavBarComponent from './components/NavBarComponent.vue';
-import BannerComponent from './components/BannerComponent.vue';
+import NavBarComponent from "@/components/NavBarComponent.vue";
 
 export default {
   name: "App",
-  components: {
-    NavBarComponent,
-    BannerComponent,
-  },
+  components: { NavBarComponent },
 };
 </script>
+
 <style>
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #FDF6EC;
+  color: #1C0A00;
+}
+
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+  min-height: 100vh;
 }
 
-nav {
-  padding: 30px;
-}
-
-nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-nav a.router-link-exact-active {
-  color: #42b983;
+h1 {
+  font-family: Georgia, serif;
+  color: #1C0A00;
 }
 </style>
