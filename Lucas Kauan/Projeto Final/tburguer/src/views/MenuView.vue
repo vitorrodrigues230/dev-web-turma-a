@@ -31,7 +31,7 @@
         },
         methods: {
             async consultarMenu() {
-            const response = await fetch("http://localhost:3000/menu");
+            const response = await fetch(`${this.$apiUrl}/menu`);
             const dados = await response.json();
             this.listaMenuHamburgues = dados.burgues;
             console.log(this.listaMenuHamburgues);

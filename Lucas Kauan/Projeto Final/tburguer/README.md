@@ -10,6 +10,10 @@ npm install
 npm run serve
 ```
 
+### Iniciar Banco de Dados
+```
+node node_modules/json-server/lib/cli/bin.js --watch db/db.json --port 3000
+```
 ### Compiles and minifies for production
 ```
 npm run build

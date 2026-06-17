@@ -97,12 +97,12 @@ export default {
   },
   methods: {
     async getTipoPontos() {
-      const response = await fetch("http://localhost:3000/tipos_pontos");
+      const response = await fetch(`${this.$apiUrl}/tipos_pontos`);
       const dados = await response.json();
       this.listaPontoCarne = dados;
     },
     async getOpcionais() {
-      const response = await fetch("http://localhost:3000/opcionais");
+      const response = await fetch(`${this.$apiUrl}/opcionais`);
       const dados = await response.json();
       this.listaComplementos = dados.complemento;
       this.listaBebidas = dados.bebidas;
@@ -123,7 +123,7 @@ export default {
 
       const dadosJson = JSON.stringify(dadosPedido);
 
-      const req = await fetch("http://localhost:3000/pedidos", {
+      const req = await fetch(`${this.$apiUrl}/pedidos`, {
         method: "POST",
         headers: {"Content-Type" :"application/json"},
         body: dadosJson,
