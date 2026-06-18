@@ -9,7 +9,7 @@
                         <div class="card-coluna">
                             <p id="nome-content">{{ burguer.nome }}</p>
                             <p id="preco-content">R${{ burguer.valor }},00</p>
-                            <P id="descricao-content">{{ burguer.descricao }}</P>
+                            <p id="descricao-content">{{ burguer.descricao }}</p>
                             <button @click="selecionarBurguer(burguer)">Selecionar</button>
                         </div>
                     </div>
@@ -30,7 +30,7 @@ export default {
     },
     methods: {
         async consultarMenu() {
-            const response = await fetch('http://localhost:3000/menu');
+            const response = await fetch(`${this.$apiUrl}/menu`);
             const dados = await response.json();
             this.listaMenuHamburguers = dados.burgues;
             console.log(this.listaMenuHamburguers);

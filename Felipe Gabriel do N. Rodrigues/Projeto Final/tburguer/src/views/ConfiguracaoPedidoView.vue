@@ -1,7 +1,7 @@
 <template>
   <div>
     <h1>Configuração dos Pedidos</h1>
-    <pedido-component-vue :burguer="this.hamburguerSelecionado"/>
+    <pedido-component-vue :burguer="hamburguerSelecionado"/>
   </div>
 </template>
 
