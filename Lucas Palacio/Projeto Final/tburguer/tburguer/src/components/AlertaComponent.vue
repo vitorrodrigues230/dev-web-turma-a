@@ -98,4 +98,4 @@ export default {
 .alerta-sucesso .alerta-icone {
   background-color: #2e7d32;
 }
-</style>
+</style> 
