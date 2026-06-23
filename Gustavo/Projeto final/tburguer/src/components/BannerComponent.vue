@@ -1,6 +1,6 @@
 <template>
     <div id="main-banner">
-       <h1>Hanburguer de churrasco</h1>
+       <h1>Hamburguer de churrasco</h1>
     </div>
 </template>
 

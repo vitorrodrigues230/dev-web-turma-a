@@ -1,5 +1,14 @@
-<template> </template>
+<script>
+import ListaPedidoComponentVue from "@/components/ListaPedidoComponent.vue";
 
-<script></script>
+export default {
+  name: "PedidoView",
+  components: {
+    ListaPedidoComponentVue,
+  },
+};
+</script>
 
-<style></style>
+<style scoped>
+
+</style>
