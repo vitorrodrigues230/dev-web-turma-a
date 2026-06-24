@@ -104,6 +104,8 @@ export default {
       await fetch(`${this.$apiUrl}/pedidos/${id}`, {
         method: "DELETE",
       });
+      this.consultarPedidos();
+      this.mostrarAlerta("sucesso", "Pedido excluído com sucesso!");
     },
     async atualizarStatusPedido(event, idPedido) {
       const idPedidoAtualizado = event.target.value;
@@ -115,6 +117,8 @@ export default {
         headers: { "Content-Type": "application/json" },
         body: atualizaoJson,
       });
+      this.consultarPedidos();
+      this.mostrarAlerta("sucesso", "Status do pedido atualizado.");
     },
   },
   mounted() {
