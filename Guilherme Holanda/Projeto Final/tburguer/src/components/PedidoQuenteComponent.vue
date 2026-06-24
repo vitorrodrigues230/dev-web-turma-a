@@ -27,7 +27,7 @@
         </select>
       </div>
       <div class="inputs">
-        <<label class="secao-titulo"> Personalize sua bebida</label>
+        <label class="secao-titulo"> Personalize sua bebida</label>
         <label id="opcionais-subtitulo"> Selecione os adicionais</label>
 
         <div
@@ -60,16 +60,34 @@
           />
           <span>{{ acompanhamento.nome }}</span>
         </div>
+
+        <alerta-component-vue
+          :tipo="alerta.tipo"
+          :mensagem="alerta.mensagem"
+          :visivel="alerta.visivel"
+          @fechar="fecharAlerta"
+        />
+
         <div class="inputs">
-          <input type="submit" class="submit-btn" value="Confirmar Pedido" />
+          <input
+            type="submit"
+            class="submit-btn"
+            value="Confirmar Pedido"
+            :disabled="enviando"
+          />
         </div>
       </div>
     </form>
   </div>
 </template>
 <script>
+import AlertaComponentVue from "@/components/AlertaComponent.vue";
+
 export default {
   name: "PedidoQuenteComponent",
+  components: {
+    AlertaComponentVue,
+  },
   props: {
     item: null,
   },
@@ -82,6 +100,8 @@ export default {
       tamanhoSelecionado: "",
       listaAdicionaisSelecionados: [],
       listaAcompanhamentosSelecionados: [],
+      enviando: false,
+      alerta: { visivel: false, tipo: "aviso", mensagem: "" },
     };
   },
   methods: {
@@ -97,8 +117,31 @@ export default {
       const respAcompanhamentos = await fetch(`${this.$apiUrl}/acompanhamentos`);
       this.listaAcompanhamentos = await respAcompanhamentos.json();
     },
+    mostrarAlerta(tipo, mensagem) {
+      this.alerta = { visivel: true, tipo: tipo, mensagem: mensagem };
+    },
+    fecharAlerta() {
+      this.alerta.visivel = false;
+    },
+    validarPedido() {
+      if (this.nomeCliente.trim() === "") {
+        this.mostrarAlerta("erro", "Informe o nome do cliente para continuar.");
+        return false;
+      }
+      if (this.tamanhoSelecionado === "") {
+        this.mostrarAlerta("aviso", "Selecione o tamanho da sua bebida.");
+        return false;
+      }
+      return true;
+    },
     async criarPedido(e) {
       e.preventDefault();
+
+      if (!this.validarPedido()) {
+        return;
+      }
+
+      this.enviando = true;
 
       const dadosPedido = {
         nome: this.nomeCliente,
@@ -116,6 +159,8 @@ export default {
         headers: { "Content-Type": "application/json" },
         body: dadosJson,
       });
+
+      this.$router.push({ path: "/pedidos", query: { sucesso: "true" } });
     },
   },
   mounted() {

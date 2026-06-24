@@ -1,5 +1,11 @@
 <template>
   <div>
+    <alerta-component-vue
+      :tipo="alerta.tipo"
+      :mensagem="alerta.mensagem"
+      :visivel="alerta.visivel"
+      @fechar="fecharAlerta"
+    />
     <div id="pedidos-tabela">
       <div>
         <div id="pedidos-tabela-cabecalho">
@@ -64,12 +70,18 @@
   </div>
 </template>
 <script>
+import AlertaComponentVue from "@/components/AlertaComponent.vue";
+
 export default {
   name: "ListaPedidoComponent",
+  components: {
+    AlertaComponentVue,
+  },
   data() {
     return {
       listaPedidosRealizados: [],
       listaStatusPedido: [],
+      alerta: { visivel: false, tipo: "aviso", mensagem: "" },
     };
   },
   methods: {
@@ -81,6 +93,12 @@ export default {
     async consultarStatusPedido() {
       const response = await fetch(`${this.$apiUrl}/status_pedido`);
       this.listaStatusPedido = await response.json();
+    },
+    mostrarAlerta(tipo, mensagem) {
+      this.alerta = { visivel: true, tipo: tipo, mensagem: mensagem };
+    },
+    fecharAlerta() {
+      this.alerta.visivel = false;
     },
     async deletarPedido(id) {
       await fetch(`${this.$apiUrl}/pedidos/${id}`, {
@@ -102,6 +120,10 @@ export default {
   mounted() {
     this.consultarPedidos();
     this.consultarStatusPedido();
+
+    if (this.$route.query.sucesso === "true") {
+      this.mostrarAlerta("sucesso", "Pedido confirmado com sucesso!");
+    }
   },
 };
 </script>

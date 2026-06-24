@@ -33,16 +33,34 @@
           />
           <span>{{ acompanhamento.nome }}</span>
         </div>
+
+        <alerta-component-vue
+          :tipo="alerta.tipo"
+          :mensagem="alerta.mensagem"
+          :visivel="alerta.visivel"
+          @fechar="fecharAlerta"
+        />
+
         <div class="inputs">
-          <input type="submit" class="submit-btn" value="Confirmar Pedido" />
+          <input
+            type="submit"
+            class="submit-btn"
+            value="Confirmar Pedido"
+            :disabled="enviando"
+          />
         </div>
       </div>
     </form>
   </div>
 </template>
 <script>
+import AlertaComponentVue from "@/components/AlertaComponent.vue";
+
 export default {
   name: "PedidoSimplesComponent",
+  components: {
+    AlertaComponentVue,
+  },
   props: {
     item: null,
   },
@@ -51,6 +69,8 @@ export default {
       listaAcompanhamentos: [],
       nomeCliente: "",
       listaAcompanhamentosSelecionados: [],
+      enviando: false,
+      alerta: { visivel: false, tipo: "aviso", mensagem: "" },
     };
   },
   methods: {
@@ -58,8 +78,27 @@ export default {
       const response = await fetch(`${this.$apiUrl}/acompanhamentos`);
       this.listaAcompanhamentos = await response.json();
     },
+    mostrarAlerta(tipo, mensagem) {
+      this.alerta = { visivel: true, tipo: tipo, mensagem: mensagem };
+    },
+    fecharAlerta() {
+      this.alerta.visivel = false;
+    },
+    validarPedido() {
+      if (this.nomeCliente.trim() === "") {
+        this.mostrarAlerta("erro", "Informe o nome do cliente para continuar.");
+        return false;
+      }
+      return true;
+    },
     async criarPedido(e) {
       e.preventDefault();
+
+      if (!this.validarPedido()) {
+        return;
+      }
+
+      this.enviando = true;
 
       const dadosPedido = {
         nome: this.nomeCliente,
@@ -75,6 +114,8 @@ export default {
         headers: { "Content-Type": "application/json" },
         body: dadosJson,
       });
+
+      this.$router.push({ path: "/pedidos", query: { sucesso: "true" } });
     },
   },
   mounted() {

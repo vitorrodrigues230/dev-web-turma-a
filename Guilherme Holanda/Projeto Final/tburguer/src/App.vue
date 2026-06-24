@@ -230,4 +230,9 @@ nav a.router-link-exact-active {
   background-color: darkgoldenrod;
   color: #222;
 }
+
+.submit-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
 </style>
