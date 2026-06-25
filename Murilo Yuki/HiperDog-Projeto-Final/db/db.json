@@ -1,0 +1,111 @@
+{
+  "tipos_salsicha": [
+    {
+      "id": 1,
+      "descricao": "Salsicha Tradicional"
+    },
+    {
+      "id": 2,
+      "descricao": "Salsicha Viena"
+    },
+    {
+      "id": 3,
+      "descricao": "Salsicha de Frango"
+    },
+    {
+      "id": 4,
+      "descricao": "Salsicha Vegana"
+    }
+  ],
+  "status_pedido": [
+    {
+      "id": 1,
+      "descricao": "Pedido em espera"
+    },
+    {
+      "id": 2,
+      "descricao": "Em produção"
+    },
+    {
+      "id": 3,
+      "descricao": "A caminho"
+    },
+    {
+      "id": 4,
+      "descricao": "Entregue"
+    },
+    {
+      "id": 5,
+      "descricao": "Pedido pendente"
+    },
+    {
+      "id": 6,
+      "descricao": "Pedido realizado"
+    }
+  ],
+  "pedidos": [],
+  "opcionais": {
+    "complemento": [
+      {
+        "id": 1,
+        "nome": "Batata Palha",
+        "valor": 2
+      },
+      {
+        "id": 2,
+        "nome": "Purê de Batata",
+        "valor": 3
+      },
+      {
+        "id": 3,
+        "nome": "Milho e Ervilha",
+        "valor": 2
+      },
+      {
+        "id": 4,
+        "nome": "Vinagrete",
+        "valor": 2
+      },
+      {
+        "id": 5,
+        "nome": "Bacon em Cubos",
+        "valor": 4
+      }
+    ],
+    "bebidas": [
+      {
+        "id": 1,
+        "nome": "Coca Cola Lata 310 ml",
+        "valor": 6
+      },
+      {
+        "id": 2,
+        "nome": "Suco de Laranja 300 ml",
+        "valor": 7
+      }
+    ]
+  },
+  "hotdogs": [
+    {
+      "id": 1,
+      "nome": "Dogão Tradicional",
+      "foto": "/img/dog1.jpeg",
+      "descricao": "Pão macio, salsicha tradicional, molho de tomate da casa, mostarda e ketchup.",
+      "valor": 15
+    },
+    {
+      "id": 2,
+      "nome": "Dogão Duplo Cheddar",
+      "foto": "/img/dog2.jpeg",
+      "descricao": "Pão macio, duas salsichas Viena, muito cheddar derretido e cebola caramelizada.",
+      "valor": 22
+    },
+    {
+      "id": 3,
+      "nome": "Hot Dog Vegano",
+      "foto": "/img/dog3.jpeg",
+      "descricao": "Pão sem leite, salsicha de soja, purê de batata, milho, ervilha e batata palha.",
+      "valor": 20
+    }
+  ]
+}
