@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 200" width="280" height="200">
+  <rect width="280" height="200" rx="0" fill="#fdf3f7"/>
+  <!-- cone -->
+  <polygon points="116,120 164,120 140,182" fill="#e0a96d" stroke="#c98b4f" stroke-width="2"/>
+  <line x1="124" y1="128" x2="150" y2="160" stroke="#c98b4f" stroke-width="1.5" opacity="0.6"/>
+  <line x1="138" y1="126" x2="150" y2="150" stroke="#c98b4f" stroke-width="1.5" opacity="0.6"/>
+  <line x1="116" y1="134" x2="134" y2="170" stroke="#c98b4f" stroke-width="1.5" opacity="0.6"/>
+  <!-- scoop -->
+  <circle cx="140" cy="92" r="46" fill="#ff6fa5" stroke="#c65680" stroke-width="2.5"/>
+  <circle cx="112" cy="120" r="20" fill="#ff6fa5" stroke="#c65680" stroke-width="2.5"/>
+  <circle cx="168" cy="120" r="20" fill="#ff6fa5" stroke="#c65680" stroke-width="2.5"/>
+  
+  <ellipse cx="126" cy="74" rx="16" ry="11" fill="#ffffff" opacity="0.30"/>
+  <!-- cherry -->
+  <circle cx="140" cy="50" r="9" fill="#e23b5a"/>
+  <path d="M140 41 q8 -10 14 -8" stroke="#5a8f3c" stroke-width="3" fill="none" stroke-linecap="round"/>
+</svg>

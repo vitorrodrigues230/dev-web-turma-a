@@ -1,0 +1,225 @@
+{
+  "tipos_pontos": [
+    {
+      "id": 1,
+      "descricao": "1 Bola"
+    },
+    {
+      "id": 2,
+      "descricao": "2 Bolas"
+    },
+    {
+      "id": 3,
+      "descricao": "3 Bolas"
+    },
+    {
+      "id": 4,
+      "descricao": "Casquinha"
+    }
+  ],
+  "status_pedido": [
+    {
+      "id": 1,
+      "descricao": "Pedido em espera"
+    },
+    {
+      "id": 2,
+      "descricao": "Em produção"
+    },
+    {
+      "id": 3,
+      "descricao": "A caminho"
+    },
+    {
+      "id": 4,
+      "descricao": "Entregue"
+    },
+    {
+      "id": 5,
+      "descricao": "Pedido pendente"
+    },
+    {
+      "id": 6,
+      "descricao": "Pedido realizado"
+    }
+  ],
+  "pedidos": [
+    {
+      "nome": "gustavo",
+      "ponto": {
+        "id": 1,
+        "descricao": "1 Bola"
+      },
+      "bebidas": [
+        {
+          "id": 1,
+          "nome": "Água Mineral 500 ml",
+          "descricao": "",
+          "foto": "https://placehold.co/120x120/9ad0ec/333333?text=Agua",
+          "valor": 4,
+          "eh_novidade": false
+        }
+      ],
+      "complemento": [
+        {
+          "id": 2,
+          "nome": "Granola Crocante",
+          "descricao": "Mix crocante de granola e castanhas.",
+          "foto": "https://placehold.co/120x120/c8a165/333333?text=Granola",
+          "valor": 2,
+          "eh_novidade": false
+        }
+      ],
+      "burguer": {
+        "id": 1,
+        "nome": "Morango",
+        "foto": "/img/morango.svg",
+        "descricao": "Sorvete cremoso de morango feito com fruta selecionada.",
+        "valor": 12,
+        "eh_novidade": true
+      },
+      "statusId": 5,
+      "id": 3
+    }
+  ],
+  "opcionais": {
+    "complemento": [
+      {
+        "id": 1,
+        "nome": "Calda de Chocolate",
+        "descricao": "Calda quente de chocolate meio amargo.",
+        "foto": "https://placehold.co/120x120/6f4e37/ffffff?text=Calda",
+        "valor": 3,
+        "eh_novidade": true
+      },
+      {
+        "id": 2,
+        "nome": "Granola Crocante",
+        "descricao": "Mix crocante de granola e castanhas.",
+        "foto": "https://placehold.co/120x120/c8a165/333333?text=Granola",
+        "valor": 2,
+        "eh_novidade": false
+      },
+      {
+        "id": 3,
+        "nome": "Paçoca Triturada",
+        "descricao": "Paçoca de amendoim esfarelada.",
+        "foto": "https://placehold.co/120x120/d2a679/333333?text=Pacoca",
+        "valor": 2,
+        "eh_novidade": false
+      },
+      {
+        "id": 4,
+        "nome": "Leite Condensado",
+        "descricao": "Fio generoso de leite condensado.",
+        "foto": "https://placehold.co/120x120/f5f0e1/333333?text=Leite+Cond",
+        "valor": 2,
+        "eh_novidade": true
+      }
+    ],
+    "bebidas": [
+      {
+        "id": 1,
+        "nome": "Água Mineral 500 ml",
+        "descricao": "",
+        "foto": "https://placehold.co/120x120/9ad0ec/333333?text=Agua",
+        "valor": 4,
+        "eh_novidade": false
+      },
+      {
+        "id": 2,
+        "nome": "Refrigerante Lata 350 ml",
+        "descricao": "",
+        "foto": "https://placehold.co/120x120/e74c3c/ffffff?text=Refri",
+        "valor": 6,
+        "eh_novidade": false
+      },
+      {
+        "id": 3,
+        "nome": "Suco Natural 300 ml",
+        "descricao": "",
+        "foto": "https://placehold.co/120x120/f39c12/ffffff?text=Suco",
+        "valor": 8,
+        "eh_novidade": false
+      },
+      {
+        "id": 4,
+        "nome": "Café Expresso",
+        "descricao": "",
+        "foto": "https://placehold.co/120x120/4b3621/ffffff?text=Cafe",
+        "valor": 5,
+        "eh_novidade": false
+      }
+    ]
+  },
+  "menu": {
+    "limitado": [
+      {
+        "id": 1,
+        "nome": "Pistache Especial",
+        "foto": "/img/pistache.svg",
+        "descricao": "Edição limitada: creme de pistache com pedaços da castanha.",
+        "valor": 18,
+        "eh_novidade": true
+      }
+    ],
+    "burgues": [
+      {
+        "id": 1,
+        "nome": "Morango",
+        "foto": "/img/morango.svg",
+        "descricao": "Sorvete cremoso de morango feito com fruta selecionada.",
+        "valor": 12,
+        "eh_novidade": true
+      },
+      {
+        "id": 2,
+        "nome": "Chocolate",
+        "foto": "/img/chocolate.svg",
+        "descricao": "Chocolate intenso e cremoso, o queridinho da galera.",
+        "valor": 12,
+        "eh_novidade": true
+      },
+      {
+        "id": 3,
+        "nome": "Flocos",
+        "foto": "/img/flocos.svg",
+        "descricao": "Creme com lascas crocantes de chocolate.",
+        "valor": 10,
+        "eh_novidade": true
+      },
+      {
+        "id": 4,
+        "nome": "Ninho com Nutella",
+        "foto": "/img/ninho.svg",
+        "descricao": "Leite Ninho com generosas raias de Nutella.",
+        "valor": 15,
+        "eh_novidade": true
+      },
+      {
+        "id": 5,
+        "nome": "Maracujá",
+        "foto": "/img/maracuja.svg",
+        "descricao": "Refrescante e azedinho na medida certa.",
+        "valor": 10,
+        "eh_novidade": true
+      },
+      {
+        "id": 6,
+        "nome": "Açaí",
+        "foto": "/img/acai.svg",
+        "descricao": "Açaí encorpado direto da Amazônia.",
+        "valor": 14,
+        "eh_novidade": true
+      },
+      {
+        "id": 7,
+        "nome": "Baunilha",
+        "foto": "/img/baunilha.svg",
+        "descricao": "Clássico atemporal de fava de baunilha.",
+        "valor": 8,
+        "eh_novidade": true
+      }
+    ]
+  }
+}
