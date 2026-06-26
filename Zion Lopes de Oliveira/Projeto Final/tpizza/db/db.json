@@ -1,0 +1,223 @@
+{
+  "tipos_massa": [
+    {
+      "id": 1,
+      "descricao": "Massa fina"
+    },
+    {
+      "id": 2,
+      "descricao": "Massa tradicional"
+    },
+    {
+      "id": 3,
+      "descricao": "Massa grossa"
+    },
+    {
+      "id": 4,
+      "descricao": "Massa com borda recheada"
+    }
+  ],
+  "status_pedido": [
+    {
+      "id": 1,
+      "descricao": "Pedido em espera"
+    },
+    {
+      "id": 2,
+      "descricao": "Preparando"
+    },
+    {
+      "id": 3,
+      "descricao": "No forno"
+    },
+    {
+      "id": 4,
+      "descricao": "Saiu para entrega"
+    },
+    {
+      "id": 5,
+      "descricao": "Pedido pendente"
+    },
+    {
+      "id": 6,
+      "descricao": "Entregue"
+    }
+  ],
+  "pedidos": [
+    {
+      "nome": "Teste1",
+      "massa": {
+        "id": 2,
+        "descricao": "Massa tradicional"
+      },
+      "bebidas": [
+        {
+          "id": 1,
+          "nome": "Coca Cola Lata 310 ml",
+          "valor": 6
+        },
+        {
+          "id": 4,
+          "nome": "Suco Del Valle Uva 290 ml",
+          "valor": 7
+        }
+      ],
+      "adicionais": [
+        {
+          "id": 4,
+          "nome": "Cheddar extra",
+          "valor": 5
+        }
+      ],
+      "pizza": {
+        "id": 1,
+        "nome": "Calabresa Especial",
+        "foto": "https://images.pexels.com/photos/825661/pexels-photo-825661.jpeg?auto=compress&cs=tinysrgb&w=400",
+        "descricao": "Molho de tomate artesanal, mussarela derretida, calabresa defumada fatiada, cebola roxa, azeitonas pretas e oregano fresco.",
+        "valor": 45
+      },
+      "statusId": "1",
+      "id": 1
+    },
+    {
+      "nome": "Teste2",
+      "massa": {
+        "id": 3,
+        "descricao": "Massa grossa"
+      },
+      "bebidas": [
+        {
+          "id": 4,
+          "nome": "Suco Del Valle Uva 290 ml",
+          "valor": 7
+        },
+        {
+          "id": 1,
+          "nome": "Coca Cola Lata 310 ml",
+          "valor": 6
+        }
+      ],
+      "adicionais": [
+        {
+          "id": 1,
+          "nome": "Borda recheada com catupiry",
+          "valor": 8
+        },
+        {
+          "id": 4,
+          "nome": "Cheddar extra",
+          "valor": 5
+        }
+      ],
+      "pizza": {
+        "id": 1,
+        "nome": "Calabresa",
+        "foto": "https://cdn0.tudoreceitas.com/pt/posts/9/8/3/pizza_calabresa_e_mussarela_4389_orig.jpg",
+        "descricao": "Molho de tomate artesanal, mussarela derretida, calabresa defumada fatiada, cebola roxa, azeitonas pretas e oregano fresco.",
+        "valor": 45
+      },
+      "statusId": 5,
+      "id": 2
+    }
+  ],
+  "opcionais": {
+    "adicionais": [
+      {
+        "id": 1,
+        "nome": "Borda recheada com catupiry",
+        "valor": 8
+      },
+      {
+        "id": 2,
+        "nome": "Catupiry extra",
+        "valor": 5
+      },
+      {
+        "id": 3,
+        "nome": "Bacon crocante",
+        "valor": 6
+      },
+      {
+        "id": 4,
+        "nome": "Cheddar extra",
+        "valor": 5
+      }
+    ],
+    "bebidas": [
+      {
+        "id": 1,
+        "nome": "Coca Cola Lata 310 ml",
+        "valor": 6
+      },
+      {
+        "id": 2,
+        "nome": "Guarana Antarctica Lata 350 ml",
+        "valor": 6
+      },
+      {
+        "id": 3,
+        "nome": "Coca Cola Zero Lata 310 ml",
+        "valor": 6
+      },
+      {
+        "id": 4,
+        "nome": "Suco Del Valle Uva 290 ml",
+        "valor": 7
+      }
+    ]
+  },
+  "menu": {
+    "destaque": [],
+    "pizzas": [
+      {
+        "id": 1,
+        "nome": "Calabresa",
+        "foto": "https://cdn0.tudoreceitas.com/pt/posts/9/8/3/pizza_calabresa_e_mussarela_4389_orig.jpg",
+        "descricao": "Molho de tomate artesanal, mussarela derretida, calabresa defumada fatiada, cebola roxa, azeitonas pretas e oregano fresco.",
+        "valor": 45
+      },
+      {
+        "id": 2,
+        "nome": "Quatro Queijos",
+        "foto": "https://www.receitasnestle.com.br/sites/default/files/srh_recipes/d036cd01122da62bf581784f52d99b3a.jpg",
+        "descricao": "Molho de tomate artesanal, mussarela, provolone, gorgonzola e catupiry gratinados no forno a lenha.",
+        "valor": 48
+      },
+      {
+        "id": 3,
+        "nome": "Frango com Catupiry",
+        "foto": "https://images.pexels.com/photos/1049626/pexels-photo-1049626.jpeg?auto=compress&cs=tinysrgb&w=400",
+        "descricao": "Molho de tomate, mussarela, frango desfiado temperado, catupiry cremoso, milho e oregano.",
+        "valor": 44
+      },
+      {
+        "id": 4,
+        "nome": "Marguerita",
+        "foto": "https://cloudfront-us-east-1.images.arcpublishing.com/estadao/YANRMY3TBZGWBCM2UDY6LEZJMA.jpg",
+        "descricao": "Molho de tomate fresco, mussarela de bufala, tomate cereja, manjericao fresco e azeite extra virgem.",
+        "valor": 42
+      },
+      {
+        "id": 5,
+        "nome": "Portuguesa",
+        "foto": "https://receitatodahora.com.br/wp-content/uploads/2024/08/pizza-portuguesa-0508-1200x900.jpg",
+        "descricao": "Molho de tomate, mussarela, presunto, ovos, cebola, azeitonas verdes, ervilha e oregano.",
+        "valor": 46
+      },
+      {
+        "id": 6,
+        "nome": "Pepperoni",
+        "foto": "https://images.pexels.com/photos/803290/pexels-photo-803290.jpeg?auto=compress&cs=tinysrgb&w=400",
+        "descricao": "Molho de tomate, mussarela derretida e generosas fatias de pepperoni crocante.",
+        "valor": 43
+      },
+      {
+        "id": 7,
+        "nome": "Napolitana",
+        "foto": "https://cloudfront-us-east-1.images.arcpublishing.com/estadao/MHEB7V2WRFDVHBXPFP6RFYZ66U.jpg",
+        "descricao": "Molho de tomate, mussarela, tomate fatiado, parmesao ralado, manjericao e oregano.",
+        "valor": 38
+      }
+    ]
+  }
+}
