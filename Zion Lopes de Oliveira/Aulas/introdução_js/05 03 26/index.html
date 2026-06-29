@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Teste de Botão</title>
+</head>
+<body>
+  <img id = "Imagem" src="https://www.w3schools.com/Js/img_javascript_480.jpg" width="200" height="200">
+  <br>
+  <button onclick="toggleImage()">Botãozão</button>
+
+  <script>
+    let visivel = true;
+    
+    function Botao() {
+      if (visivel == true) {
+          document.getElementById('Imagem').style.display = 'none';
+          visivel = false;
+      } 
+      else {
+          document.getElementById('Imagem').style.display = 'block';
+          visivel = true;
+      }
+    }
+  </script>
+
+  <script>
+    function toggleImage() {
+      let img = document.getElementById('Imagem')
+      img.style.display = img.style.display === 'none' ? 'block' : 'none';
+    }
+
+  </script>
+
+</body>
+</html>
