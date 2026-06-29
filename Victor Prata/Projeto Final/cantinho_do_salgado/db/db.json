@@ -1,0 +1,102 @@
+{
+  "status_pedido": [
+    { "id": 1, "descricao": "Pedido em espera" },
+    { "id": 2, "descricao": "Em produção" },
+    { "id": 3, "descricao": "A caminho" },
+    { "id": 4, "descricao": "Entregue" },
+    { "id": 5, "descricao": "Pedido pendente" },
+    { "id": 6, "descricao": "Pedido realizado" }
+  ],
+  "pedidos": [],
+  "opcionais": {
+    "complemento": [
+      {
+        "id": 1,
+        "nome": "Molho Especial",
+        "descricao": "Nosso molho artesanal exclusivo feito com temperos selecionados",
+        "foto": "/img/molho_especial.jpg",
+        "valor": 2,
+        "eh_novidade": false
+      },
+      {
+        "id": 2,
+        "nome": "Queijo Extra",
+        "descricao": "Fatia extra de queijo mussarela derretido",
+        "foto": "/img/queijo_extra.jpg",
+        "valor": 3,
+        "eh_novidade": false
+      }
+    ],
+    "bebidas": [
+      {
+        "id": 1,
+        "nome": "Coca Cola Lata 310 ml",
+        "descricao": "",
+        "foto": "https://instadelivery-public.nyc3.cdn.digitaloceanspaces.com/itens/1696431408651d7d30645b9_75_75.jpeg",
+        "valor": 6,
+        "eh_novidade": false
+      },
+      {
+        "id": 2,
+        "nome": "Shweppes Citrus 310 ml",
+        "descricao": "",
+        "foto": "https://instadelivery-public.nyc3.cdn.digitaloceanspaces.com/itens/16966989566521924cc9418_75_75.jpeg",
+        "valor": 6,
+        "eh_novidade": false
+      },
+      {
+        "id": 3,
+        "nome": "Coca Cola Zero Lata 310 ml",
+        "descricao": "",
+        "foto": "https://instadelivery-public.nyc3.cdn.digitaloceanspaces.com/itens/1696431455651d7d5fd3661_75_75.jpeg",
+        "valor": 6,
+        "eh_novidade": false
+      },
+      {
+        "id": 4,
+        "nome": "Del Valle Uva Lata 290 ml",
+        "descricao": "",
+        "foto": "https://instadelivery-public.nyc3.cdn.digitaloceanspaces.com/itens/1696431434651d7d4a1e285_75_75.jpeg",
+        "valor": 7,
+        "eh_novidade": false
+      }
+    ]
+  },
+  "menu": {
+    "limitado": [],
+    "salgados": [
+      {
+        "id": 1,
+        "nome": "Coxinha",
+        "foto": "/img/coxinha.jpg",
+        "descricao": "Massa crocante e dourada recheada com frango desfiado temperado com ervas finas, catupiry cremoso e um toque especial de azeite de oliva.",
+        "valor": 8,
+        "eh_novidade": false
+      },
+      {
+        "id": 2,
+        "nome": "Bolinha de Queijo",
+        "foto": "/img/bolinha_queijo.png",
+        "descricao": "Bolinha frita crocante por fora e recheada com queijo mussarela derretido. Irresistível e perfeita para qualquer hora!",
+        "valor": 6,
+        "eh_novidade": false
+      },
+      {
+        "id": 3,
+        "nome": "Kibe",
+        "foto": "/img/kibe.jpg",
+        "descricao": "Kibe frito artesanal feito com carne bovina moída, trigo para quibe, hortelã fresca e temperos árabes tradicionais. Crocante por fora, macio por dentro.",
+        "valor": 7,
+        "eh_novidade": true
+      },
+      {
+        "id": 4,
+        "nome": "Pastel de Queijo",
+        "foto": "/img/pastel_queijo.jpg",
+        "descricao": "Pastel sequinho e crocante recheado com queijo mussarela e catupiry. Massa fininha frita na hora para garantir máxima crocância.",
+        "valor": 9,
+        "eh_novidade": true
+      }
+    ]
+  }
+}
